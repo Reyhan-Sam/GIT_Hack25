@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Results</title>
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="navbar">
+            <img src="https://ires.ubc.ca/files/2019/10/ubc-logo.png" alt="logo" class="nav-logo">
+            <div class="nav-item">
+                <i class="ri-shield-user-line"></i>
+                <a href="#" onclick="goToIndexPage()">About</a>
+            </div>
+            <div class="nav-item">
+                <i class="ri-upload-2-line"></i>
+                <a href="#"">How does it work?</a>
+            </div>
+            <a href="#" class="get-started">Get Started</a>
+        </div>
+    </nav>
+    </header>
+    <div class="folder">
+        <details>
+            <summary style="color:#78C1FF">Summary</summary>
+            <p>Summary section</p>
+            <ul>
+                <li>Key Item 1</li>
+                <li>Key Item 2</li>
+            </ul>
+            
+        </details>
+        <details>
+            <summary style="color:red">Red Flags</summary>
+            <p>Major concern summary</p>
+            <ol>
+                <li>Concern 1</li>
+                <li>Concern 2</li>
+            </ol>
+        </details>
+        <details>
+            <summary style="color:gold">Yellow Flags</summary>
+            <p>Potential problem areas</p>
+            <ol>
+                <li>Yellow Flag 1</li>
+                <li>Yellow Flag 2</li>
+            </ol>
+        </details>
+        <details>
+            <summary style="color:green">Green Flags</summary>
+            <p>Positive items</p>
+            <ol>
+                <li>Positive item 1</li>
+                <li>Positive item 2</li>
+            </ol>
+        </details>
+        <div class="bottom-tab"></div>
+        <button class="download"><i class="ri-download-line"></i> Download Your Summary</button>
+    </div>
+    <script>
+        function goToIndexPage() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
