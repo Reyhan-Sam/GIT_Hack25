@@ -9,10 +9,6 @@
 </head>
 <body>
 
-
-    
-
-
     <!-- Folder icon at the top center of the box -->
     <div class="upload-container">
         <img src="openfolder.png" alt="Folder icon" class="folder-icon" />
@@ -47,12 +43,12 @@
         function insertText() {
             const inputText = document.getElementById('textInput').value;
             if (inputText.trim() !== "") {
-                document.getElementById('textContent').textContent = `Inserted Text: ${inputText}`;
+                localStorage.setItem("userText", inputText);
+                window.location.href = "formattedText.html";
             } else {
-                document.getElementById('textContent').textContent = "No text inserted.";
+                document.getElementById('textContent').textContent = "Please enter some text.";
             }
         }
-
 
         function goToIndexPage() {
             window.location.href = "index.html"; // Redirect to another page

@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel = "stylesheet" href = "style.css"/>
     <title>Fine Print</title>
-    <link rel = "stylesheet" href = "styles.css"/>
-   
 </head>
 <body>
     
-    <div class="title-container">
-        <h1 class="heading">Fine Print</h1>
-        <p class="subheading">Because the fine print matters</p>
-        <button class="navigate-button" onclick="goToUploadPage()">Begin Upload</button>
+    <nav>
+        <img src="images/UBC-logo.png">
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">How does it Work?</a>
+            <a href="#">Don't Believe Us?</a>
+            <a href="#">Extension</a>
+        </div>
+        <button>Get Started</button>
+    </nav>
+
+    <div class="begin">
+        <div class="title-container">
+            <div class="top">
+                <h1>Fine Print</h1>
+                <p>Because the fine print matters</p>  
+                <div class="buttons">
+                    <button class="navigate-button" onclick=goToUploadPage()>Get Started</button>
+                    <button><i class="ri-group-line"></i>Meet the Team</button>
+                </div>
+            </div>
+        </div>
+
+        <img src="images/scany.gif">
     </div>
+
 
     <script>
         function goToUploadPage() {

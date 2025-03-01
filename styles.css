@@ -1,8 +1,8 @@
 
+/* color: rgb(180, 194, 185); */
 
 body {
   
-
     background-color: #1f4565;
     background-image: linear-gradient( #1f4565 , #B0E0E6);
     display: flex;
@@ -46,7 +46,7 @@ body {
 .upload-container {
     position: relative;
     background-color: rgb(180, 194, 185);
-    top: 100px;  /* Moves the folder icon outside the box */
+    top: 180px;  /* Moves the folder icon outside the box */
     border-radius: 10px;
     padding: 40px;
     display: flex;
@@ -61,25 +61,26 @@ body {
 .folder-icon {
     width: 200px;
     position: absolute;
-    top: -250px;  /* Moves the folder icon outside the box */
+    top: -220px;  /* Moves the folder icon outside the box */
 }
 
 /* Buttons inside the box */
 .button-box {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 20px;
 }
 
 
 #textInput {
     width: 80%;
-    padding: 10px;
-    margin-top: 100px;
+    padding: 30px;
+    margin-top: 190px;
     font-size: 1rem;
     border: 1px solid #315F7D;
     border-radius: 5px;
     text-align: center;
+
 }
 
 /* Button styles */
