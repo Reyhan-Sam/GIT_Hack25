@@ -10,12 +10,8 @@
     <title>Results</title>
 </head>
 <body>
-
-    <div id="particles-js">
-
-    </div>
-
-    <header>
+    <div id="particles-js"></div>
+    
     <nav>
         <div class="navbar">
             <img src="https://ires.ubc.ca/files/2019/10/ubc-logo.png" alt="logo" class="nav-logo">
@@ -27,10 +23,18 @@
                 <i class="ri-upload-2-line"></i>
                 <a href="#"">How does it work?</a>
             </div>
+            <div class="nav-item">
+                <i class="ri-lightbulb-flash-line"></i>
+                <a href="#">Don't believe us?</a>
+            </div>
+            <div class="nav-item">
+                <i class="ri-links-line"></i>
+                <a href="#">Extension</a>
+            </div>
             <a href="#" class="get-started">Get Started</a>
         </div>
     </nav>
-    </header>
+    
     <div class="folder">
         <details>
             <summary style="color:#78C1FF">Summary</summary>
@@ -66,7 +70,7 @@
             </ol>
         </details>
         <div class="bottom-tab"></div>
-        <button class="download"><i class="ri-download-line"></i> Download Your Summary</button>
+        <button class="download">Download Your Summary  <i class="ri-download-line"></i></button>
     </div>
     <script src="particles.js"></script>
     <script src="index.js"></script>
@@ -77,20 +81,20 @@
         particlesJS("particles-js", {
         "particles": {
             "number": {
-                "value": 80, 
+                "value": 100, 
                 "density": {
                     "enable": true,
-                    "value_area": 800
+                    "value_area": 1000
                 }
             },
             "color": {
                 "value": "#ffffff"
             },
             "shape": {
-                "type": "circle"
+                "type": "star"
             },
             "opacity": {
-                "value": 0.5,
+                "value": 1,
                 "random": false
             },
             "size": {
@@ -101,7 +105,7 @@
                 "enable": true,
                 "distance": 150,
                 "color": "#ffffff",
-                "opacity": 0.4,
+                "opacity": 0.7,
                 "width": 1
             },
             "move": {
