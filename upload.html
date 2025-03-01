@@ -9,8 +9,10 @@
 </head>
 <body>
 
-    <label for="myfile">Select a file:</label>
-    <input type="file" id="myfile" name="myfile">
+    <input type="file" id="fileInput" style="display: none;">
+    <button onclick="document.getElementById('fileInput').click();">Browse Files</button>
+    <p id="fileName"></p>
+    
 
 
     <!-- Folder icon at the top center of the box -->
@@ -29,9 +31,14 @@
         <button class="navigate-button" onclick="goToIndexPage()">Home</button>
     </div>
 
-
-
     <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                document.getElementById('fileName').textContent = `Selected File: ${file.name}`;
+            }
+        });
+
         function goToIndexPage() {
             window.location.href = "index.html"; // Redirect to another page
         }
