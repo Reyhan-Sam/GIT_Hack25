@@ -5,41 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <link rel = "stylesheet" href = "style.css"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <title>Fine Print</title>
 </head>
 <body>
     
-    <nav>
-        <img src="images/UBC-logo.png">
-        <div class="nav-links">
-            <a href="#">About</a>
-            <a href="#">How does it Work?</a>
-            <a href="#">Don't Believe Us?</a>
-            <a href="#">Extension</a>
-        </div>
-        <button>Get Started</button>
-    </nav>
+    <div class="Split1">
+        <nav>
+            <img src="images/UBC-logo.png">
+            <div class="nav-links">
+                <a href="#">About</a>
+                <a href="#">How does it Work?</a>
+                <a href="#">Don't Believe Us?</a>
+                <a href="#">Extension</a>
+            </div>
+            <button>Get Started</button>
+        </nav>
 
-    <div class="begin">
-        <div class="title-container">
-            <div class="top">
-                <h1>Fine Print</h1>
-                <p>Because the fine print matters</p>  
-                <div class="buttons">
-                    <button class="navigate-button" onclick=goToUploadPage()>Get Started</button>
-                    <button><i class="ri-group-line"></i>Meet the Team</button>
+        <div class="begin">
+            <div class="title-container">
+                <div class="top">
+                    <h1>Fine Print</h1>
+                    <p>Because the fine print matters</p>  
+                    <div class="buttons">
+                        <button class="navigate-button" onclick=goToUploadPage()>Get Started</button>
+                        <button class="navigate-button"><i class="ri-group-line"></i>Meet the Team</button>
+                    </div>
                 </div>
             </div>
+            <img src="images/scany.gif">
         </div>
-
-        <img src="images/scany.gif">
     </div>
 
-    <div class="about"></div>
 
-    <div class="work"></div>
+    </div>
 
-    <div class="proof"></div>
 
     <script>
         function goToUploadPage() {

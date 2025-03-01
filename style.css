@@ -20,7 +20,8 @@ button{
 }
 
 h1{
-    font-weight: 400;
+    font-weight: 800;
+    font-family: 'Switzer', sans-serif;
 }
 
 nav{
@@ -86,15 +87,14 @@ nav button:hover{
 
 body {
     background-color: #1f4565;
-    background-image: linear-gradient( #1f4565 , #B0E0E6);
+    background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6 50%, #FFF 50%);
     display: flex;
     flex-direction: column;
     justify-content: center;   /* Horizontally center */
     align-items: center;       /* Vertically center */
     height: 100vh;             /* Take up the full height of the viewport */
     margin: 0;  
-
-}
+} 
 
 .begin{
     margin-top: 80px;
@@ -104,10 +104,12 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    margin-left: 100px;
 }
 
 .begin > img{
-    max-width: 520px;
+    margin-right: 40px;
+    max-width: 900px;
     width: 44%;
     border-radius: 26px;
 }
@@ -118,16 +120,41 @@ body {
     gap: 100px;
 }
 
+.begin .title-container .top{
+    margin-bottom: 50px;
+}
+
 .begin .title-container .top h1{
-    font-size: 44px;
-    margin-bottom: 24px;
+    font-size: 74px;
+    margin-bottom: -5px;
 }
 
 .begin .title-container .top p{
     font-size: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 44px;
     text-align: justify;
 }
+
+.begin .title-container .top .buttons{
+    display: flex;
+    gap: 8px;
+}
+
+.begin .title-container .top .buttons button{
+    font-size: 16px;
+    border: none;
+    padding: 5px 20px;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: -10px;
+}
+
 /*
 .title-container {
     position: absolute;

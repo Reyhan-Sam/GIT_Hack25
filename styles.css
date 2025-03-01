@@ -1,6 +1,4 @@
-.heading{
-    color:rgb(123, 138, 143)
-}
+
 
 body {
   
@@ -40,17 +38,6 @@ body {
     opacity: 0.8;  /* Slight transparency for softer look */
 }
 
-.navigate-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background-color: #3a6a91;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
 
 .navigate-button:hover {
     background-color: #3d749a;
@@ -58,10 +45,10 @@ body {
 
 .upload-container {
     position: relative;
-    background-color: rgb(168, 178, 180);  
+    background-color: rgb(180, 194, 185);
     top: 100px;  /* Moves the folder icon outside the box */
     border-radius: 10px;
-    padding: 90px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +59,7 @@ body {
 
 /* Folder icon positioning */
 .folder-icon {
-    width: 250px;
+    width: 200px;
     position: absolute;
     top: -250px;  /* Moves the folder icon outside the box */
 }
@@ -82,6 +69,17 @@ body {
     display: flex;
     flex-direction: row;
     gap: 80px;
+}
+
+
+#textInput {
+    width: 80%;
+    padding: 10px;
+    margin-top: 100px;
+    font-size: 1rem;
+    border: 1px solid #315F7D;
+    border-radius: 5px;
+    text-align: center;
 }
 
 /* Button styles */
