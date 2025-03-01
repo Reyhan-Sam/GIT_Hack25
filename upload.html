@@ -9,9 +9,7 @@
 </head>
 <body>
 
-    <input type="file" id="fileInput" style="display: none;">
-    <button onclick="document.getElementById('fileInput').click();">Browse Files</button>
-    <p id="fileName"></p>
+
     
 
 
@@ -21,10 +19,17 @@
 
         <!-- Buttons inside a transparent box -->
         <div class="button-box">
-            <button class="upload-btn">Upload File</button>
-            <button class="insert-text-btn">Insert Text</button>
+            <input type="file" id="fileInput" style="display: none;">
+            <button class="upload-btn" onclick="document.getElementById('fileInput').click();">Upload File</button>
+            <p id="fileName"></p>
+            
+            
+            <button class="insert-text-btn" onclick="insertText()">Insert Text</button>
+            <p id="textContent"></p>
         </div>
     </div>
+    
+    <input type="text" id="textInput" placeholder="Enter text here...">
 
     <!-- Navigation button to go back home -->
     <div class="title-container">
@@ -38,6 +43,16 @@
                 document.getElementById('fileName').textContent = `Selected File: ${file.name}`;
             }
         });
+
+        function insertText() {
+            const inputText = document.getElementById('textInput').value;
+            if (inputText.trim() !== "") {
+                document.getElementById('textContent').textContent = `Inserted Text: ${inputText}`;
+            } else {
+                document.getElementById('textContent').textContent = "No text inserted.";
+            }
+        }
+
 
         function goToIndexPage() {
             window.location.href = "index.html"; // Redirect to another page
