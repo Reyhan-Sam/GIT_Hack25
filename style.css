@@ -19,6 +19,10 @@ button{
     cursor: pointer;
 }
 
+h1{
+    font-weight: 400;
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -102,6 +106,18 @@ body {
     gap: 30px;
 }
 
+.begin > img{
+    max-width: 520px;
+    width: 44%;
+    border-radius: 26px;
+}
+
+.begin .title-container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .begin .title-container .top h1{
     font-size: 44px;
     margin-bottom: 24px;
@@ -112,16 +128,18 @@ body {
     margin-bottom: 24px;
     text-align: justify;
 }
-
+/*
 .title-container {
     position: absolute;
     /*top: 20%; */
+    /*
     gap: 100px;
     display: flex;
     left: 10%;  /* Align to the left */
+    /*
     transform: translateY(-50%); /* Adjust for vertical centering */
-}
-
+/*} 
+/*/ 
 /* Heading styles */
 .heading {
     color: rgb(180, 194, 185);
@@ -154,14 +172,6 @@ body {
 .navigate-button:hover {
     background-color: #3d749a;
 }
-
-.begin > img{
-    max-width: 520px;
-    width: 44%;
-    border-radius: 26px;
-}
-
-
 
 .upload-container {
     position: relative;
