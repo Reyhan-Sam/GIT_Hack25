@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Print</title>
+    <link rel = "stylesheet" href = "styles.css"/>
+   
+</head>
+<body>
+
+    <label for="myfile">Select a file:</label>
+    <input type="file" id="myfile" name="myfile">
+
+
+    <!-- Folder icon at the top center of the box -->
+    <div class="upload-container">
+        <img src="openfolder.png" alt="Folder icon" class="folder-icon" />
+
+        <!-- Buttons inside a transparent box -->
+        <div class="button-box">
+            <button class="upload-btn">Upload File</button>
+            <button class="insert-text-btn">Insert Text</button>
+        </div>
+    </div>
+
+    <!-- Navigation button to go back home -->
+    <div class="title-container">
+        <button class="navigate-button" onclick="goToIndexPage()">Home</button>
+    </div>
+
+
+
+    <script>
+        function goToIndexPage() {
+            window.location.href = "index.html"; // Redirect to another page
+        }
+    </script>
+
+</body>
+</html>

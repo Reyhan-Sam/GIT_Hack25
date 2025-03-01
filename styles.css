@@ -1,0 +1,120 @@
+.heading{
+    color:rgb(123, 138, 143)
+}
+
+body {
+  
+
+    background-color: #1f4565;
+    background-image: linear-gradient( #1f4565 , #B0E0E6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Horizontally center */
+    align-items: center;       /* Vertically center */
+    height: 100vh;             /* Take up the full height of the viewport */
+    margin: 0;  
+
+}
+
+.title-container {
+    position: absolute;
+    top: 20%;
+    left: 10%;  /* Align to the left */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+/* Heading styles */
+.heading {
+    color: rgb(180, 194, 185);
+    font-size: 2rem;  /* Adjust title size */
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Subheading styles */
+.subheading {
+    color: rgb(200, 220, 215);
+    font-size: 1.2rem;  /* Smaller text for subtitle */
+    font-family: Verdana, sans-serif;
+    margin-top: 5px;
+    opacity: 0.8;  /* Slight transparency for softer look */
+}
+
+.navigate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3a6a91;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navigate-button:hover {
+    background-color: #3d749a;
+}
+
+.upload-container {
+    position: relative;
+    background-color: rgb(168, 178, 180);  
+    top: 100px;  /* Moves the folder icon outside the box */
+    border-radius: 10px;
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 600px;
+}
+
+/* Folder icon positioning */
+.folder-icon {
+    width: 250px;
+    position: absolute;
+    top: -250px;  /* Moves the folder icon outside the box */
+}
+
+/* Buttons inside the box */
+.button-box {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+/* Button styles */
+.upload-btn, .insert-text-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: Verdana, sans-serif;
+    color: white;
+    background-color: #4682B4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.upload-btn:hover, .insert-text-btn:hover {
+    background-color: #315F7D;
+}
+
+/* Navigation button styles */
+.navigate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: Verdana, sans-serif;
+    color: white;
+    background-color: #4682B4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navigate-button:hover {
+    background-color: #315F7D;
+}
