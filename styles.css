@@ -128,7 +128,7 @@ section .details span{
 }
 
 .FileUpload, .TextUpload{
-    background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6 50%); 
+    background-image: -webkit-linear-gradient(-30deg, #B0E0E6, #1f4565 95%); 
 }
 
 .uploaded-area .row .content{
@@ -187,13 +187,16 @@ nav{
     transform: translateX(-50%);
     border-radius: 16px;
     padding: 12px;
+    background: white;
     z-index: 1000;
 }
 
 nav img{
-    width: 35px;
-    height: 35px;
+    width: 75px;
+    height: 60px;
+    border-radius: 10px;
 }
+
 
 nav .nav-links{
     display: flex;
@@ -234,6 +237,7 @@ nav button:hover{
 
 .insert-text-btn {
     position: absolute;
+    background: white;
     top: 50%;
     left: 75%;  
     width: 244px;
@@ -285,6 +289,7 @@ nav button:hover{
 /* Navigation button styles */
 .home-button {
     position: absolute;
+    background: white;
     top: 50%;
     width: 244px;
     left: 5%;  /* Align to the left */

@@ -13,11 +13,11 @@
     
     <div class="Split1">
         <nav>
-            <img src="images/UBC-logo.png">
+            <img src="images/FinePrint.png">
             <div class="nav-links">
-                <a href="#">About</a>
-                <a href="#">How does the AI Work?</a>
-                <a href="#">Don't Believe Us?</a>
+                <a href="#" id="link1">About</a>
+                <a href="#" id="link2">How does the AI Work?</a>
+                <a href="#" id="link3">Don't Believe Us?</a>
                 <a href="#">Extension</a>
             </div>
             <button onclick=goToUploadPage()>Get Started</button>
@@ -39,6 +39,8 @@
     </div>
 
     </div>
+
+    <div class="header"></div>
 
     <div class="about">
         <p>About</p>
@@ -94,10 +96,9 @@
   <!--  -->
 
     <div class="workingAI">
-        <div class="inner">
-            <div class="work"></div>
-            <h2></h2>
+        <p class="header">Use of AI</p>
 
+        <div class="inner">
             <div class="items">
                 <div class="item">
                     <i class="ri-flag-line"></i>
@@ -128,10 +129,79 @@
         </div>
     </div>
 
+    <div class="header"></div>
+    <div class="proof">
+        <h2>Why Believe Us?</h2>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="items">
+            <div class="item">
+                <a href="#">Your photos could be sold or used without consent</a>
+                <p>Many social media sites like Instagram have reserved the right to publicly distribute, modify, or
+                store any images you upload to their platforms.
+
+                TwitPic, an image sharing platform previously on Twitter, also reserved the right to distribute your 
+                pictures to any organisation they were affiliated with, meaning even if you delete your content, it is
+                more than likely that your pictures still exist on the internet. In addition, TwitPic famously had a 
+                deal with World Entertainment Celebrity News Network which stated any image uploaded to their site 
+                could be sold and distributed by TwitPic without compensation or consent.
+                </p>
+            </div>
+            <div class="item">
+                <a href="#">You might not be able to ever delete your account</a>
+                <p>Skype is an example of a company who does not offer users the option to delete their accounts. On 
+                    their  website, it ambiguously implies that there is an option to delete personal information, but 
+                    it is not explicitly stated if all copies of this information are deleted from Skype servers.
+                    </p>
+            </div>
+            <div class="item">
+                <a href="#">Your online activity can be tracked by companies even after you close all tabs and leave their site</a>
+                <p>Almost every webpage nowadays has an option to “Accept or Reject Cookies”, and most people just click accept
+                    without even thinking about it.
+
+                    In particular, the terms and conditions of Facebook state that if you are logged into Facebook, Meta will track 
+                    every website you visit which contains a Facebook “like” or “share” button, and tie this information to your name
+                    and email address. If you are not logged in, information on sites you visit are assigned a code and associated 
+                    with your IP address.
+                    </p>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         function goToUploadPage() {
             window.location.href = "upload.html"; // Redirect to another page
         }
+
+        function scrollToElement(elementSelector, instance = 0){
+    // Select all elements that match the given selector
+        const elements = document.querySelectorAll(elementSelector);
+        // Xheck if there are elements matching the selector and if the requested instance exists
+        if (elements.length > instance){
+            // Scroll to the specified instance of the element
+            elements[instance].scrollIntoView({ behavior: 'smooth' });
+            } 
+        }
+
+        const link1 = document.getElementById("link1");
+        const link2 = document.getElementById("link2");
+        const link3 = document.getElementById("link3");
+
+        link1.addEventListener('click', () =>{
+            scrollToElement('.header');
+        })
+
+        link2.addEventListener('click', () =>{
+            // Scroll to the second element within the "header" class
+            scrollToElement('.header', 1);
+        })
+
+        link3.addEventListener('click', () =>{
+            scrollToElement('.header', 2);
+        })
     </script>
     
 </body>

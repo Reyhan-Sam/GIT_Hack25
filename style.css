@@ -42,8 +42,9 @@ nav{
 }
 
 nav img{
-    width: 35px;
-    height: 35px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
 }
 
 nav .nav-links{
@@ -112,7 +113,8 @@ body{
 
 .begin .title-container .top h2{
     font-size: 74px;
-    margin-bottom: 24px;
+    font-weight: 800;
+    margin-bottom: -4px;
 }
 
 .begin .title-container .top p{
@@ -130,7 +132,7 @@ body{
     font-size: 16px;
     border: none;
     padding: 5px 20px;
-    border: 1px solid #dedede;
+    border: 1px solid transparent;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -251,12 +253,15 @@ body{
     padding: 50px;
 }
 
-.about > p{
+.about > p, .workingAI > p{
     font-size: 14px;
+    width: 90px;
     color: #606060;
     border: 1px solid #e8e8e8;
     padding: 6px 14px;
     border-radius: 16px;
+    align-items: center;
+    text-align: center;
     background: #FFF;
     margin-bottom: 12px;
 }
@@ -302,7 +307,7 @@ body{
     display: block;
 }
 
-.about .items .item .inner p{
+.about .items .item .inner p, .workingAI p{
     font-size: 15px;
     color: #606060;
 }
@@ -321,6 +326,14 @@ body{
     border-radius: 24px;
 }
 
+.workingAI > p{
+    margin-left: 600px;
+}
+
+.workingAI .inner .items .item p{
+    color: white;
+}
+
 .workingAI .inner > button i{
     font-size: 18px;
 }
@@ -330,11 +343,6 @@ body{
     margin-bottom: 24px;
 }
 
-.workingAI .inner p.info{
-    font-size: 18px;
-    color: #dedede;
-    margin-bottom: 24px;
-}
 
 .workingAI .inner .items{
     display: flex;
@@ -357,7 +365,54 @@ body{
 }
 
 .projects .inner .items .item p{
-    color: #a1a1a1;
+    color: white;
     font-size: 16px;
     line-height: 24px;
+}
+
+.proof{
+    padding: 100px 60px;
+    background: #f5f5f5;
+    position: absolute;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    border: 2px solid rgba(0,0,0,.5);
+}
+
+.proof > h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.proof .items{
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.proof .items .item{
+    width: 50%;
+    padding: 30px;
+    border: 1px solid #dedede;
+}
+
+.proof .items .item:nth-child(1){
+    border-radius: 12px 0 0 12px;
+}
+
+.proof .items .item:nth-child(2){
+    border-radius: 0 12px 12px 0;
+}
+
+.proof .items .item a{
+    font-size: 24px;
+    color: #000;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.proof .items .item p{
+    font-size: 20px;
+    color: #606060;
+    margin-bottom: 26px;
 }
