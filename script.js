@@ -43,4 +43,8 @@ function goToIndexPage() {
 
 function goToFeedbackPage() {
     window.location.href = "index.html"; // Redirect to another page
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9690e64e07766275ff6de14165fb03257c75899f
