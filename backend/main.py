@@ -27,7 +27,7 @@ positive_threshold = 0.95
 
 @app.route('/')
 def hello():
-    return "Hello, World!"
+    return jsonify(message="Hello, World!")
 
 #LLM summarizer
 @app.route('/summarize-text', methods=['POST'])
