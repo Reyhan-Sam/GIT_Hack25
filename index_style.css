@@ -29,13 +29,14 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    border: 1px solid #003F9A;
+    border: 1px solid #e8e8e8;
     position: absolute;
     top: 16px;
     left: 42.5%;
     transform: translateX(-30%);
     border-radius: 16px;
     padding: 12px;
+    z-index: 1000;
 }
 
 nav img{
@@ -49,28 +50,26 @@ nav .nav-links{
 }
 
 nav .nav-links a{
-    font-size: 14px;
-    color: #606060;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: black;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
 nav .nav-links a:hover{
-    color: #000;
+    color: #3A5E7A;
 }
 
 nav button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    font-size:14px;
-    height: 32px;
-    width: 122px;
-    background: #000;
-    color: #fff;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    border: 2px solid #3A5E7A;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: 0.3s;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 nav button:hover{
@@ -79,7 +78,12 @@ nav button:hover{
     border-color: #dedede;
 }
 
-body{
+
+.heading{
+    color:rgb(123, 138, 143)
+}
+
+body {
     background-color: #1f4565;
     background-image: -webkit-linear-gradient(-20deg, #1f4565, #B0E0E6 50%, #FFF 50%);
     background-size: cover;  
@@ -174,8 +178,10 @@ body{
     transition: background 0.3s ease;
 }
 
-.navigate-button:hover {
-    background-color: #3d749a;
+
+.navigate-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #315F7D;
 }
 
 .upload-container {
