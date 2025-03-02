@@ -102,6 +102,7 @@ def text_analyze(text):
     sentences = text.split('. ')
     res = []
     for sentence in sentences:
+        sentence = ' '.join(sentence.split())
         if sentence and sentence[-1] != '.':
             sentence += '.'
         prediction = ml_recognition(sentence)
