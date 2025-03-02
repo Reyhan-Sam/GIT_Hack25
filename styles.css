@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Signika', sans-serif;
+    font-family: 'Switzer', sans-serif;
 }
 
 
@@ -123,9 +123,10 @@ section .details span{
 }
 .progress-bar .progress{
     height: 100%;
-    width: 10%;
+    width: 40%;
     background: #607566;
     border-radius: inherit;
+    transition: width 0.5s linear; /* Smooth transition effect */
 
 }
 
@@ -171,6 +172,7 @@ section .details span{
 textarea {
    width: 500px;
    height: 400px;
+   font-family: 'Switzer', sans-serif;
    border: 1px solid #dedede; /* Border around the textarea */
    border-radius: 8px; /* Slight rounding of corners */
     font-size: 18px; /* Font size for text */
@@ -188,8 +190,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-weight: 100;
+    font-family: 'Switzer', sans-serif;
     background-color: #4682B4;
     color: white;
     transition: all 0.3s ease;
@@ -221,12 +222,12 @@ textarea {
 .home-button {
     position: absolute;
     top: 20%;
-    left: 10%;  /* Align to the left */
+    left: 15%;  /* Align to the left */
     transform: translateY(-50%); /* Adjust for vertical centering */
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-family: Verdana, sans-serif;
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-family: 'Switzer', sans-serif;
     color: white;
     background-color: #4682B4;
     border: 1px solid #dedede;
@@ -240,19 +241,22 @@ textarea {
 }
 
 
+
 /* These are for for the upload.html buttons*/
 .navigate-button{
     text-decoration: none;
+    font-size: 16px;
     /* Align to the left */
     transform: translateY(-50%); /* Adjust for vertical centering */
-    margin-top: 20px;
-    padding: 10px 10px;
+    margin-top: 30px;
+    padding: 10px 30px;
     font-size: 1rem;
-    font-family: Verdana, sans-serif;
+    gap: 10px;
+    font-family: 'Switzer', sans-serif;
     color: white;
     background-color: #4682B4;
     border: 1px solid #dedede;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -266,3 +270,4 @@ textarea {
     outline: none;
     box-shadow: 0 0 5px #315F7D;
 }
+
