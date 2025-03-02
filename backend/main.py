@@ -41,14 +41,24 @@ def summarize_text():
 
     prompt = f"""
     You are an expert in legal document summarization.
-    Your task is to generate a structured and precise summary of the given contract. 
-    Focus on key elements such as parties involved, obligations, terms, payment details, 
-    penalties, termination clauses, and confidentiality. The summary should be concise yet 
-    comprehensive, avoiding unnecessary legal jargon.
+    Your task is to generate a structured and precise summary of the given contract.
+    Focus on the most critical aspects that users care about, ensuring accuracy and avoiding unnecessary legal jargon.
+
+    The summary should cover the following key areas **only if they are explicitly mentioned in the document**:
+    
+    1. **Key Terms & Conditions** – The most important rules, requirements, or conditions stated in the document.
+    2. **Obligations & Responsibilities** – What each party is required to do under the contract.
+    3. **Costs, Fees & Penalties** – Any payments, hidden charges, late fees, or financial consequences.
+    4. **Rights & Restrictions** – What the user is allowed to do and what limitations are in place.
+    5. **Termination & Consequences** – How the agreement can end and what happens if the terms are violated.
+
+    If any of these categories are not present in the document, **skip them rather than generating inaccurate information**.
+
+    Dont make the title for summmary.
 
     Here is the contract for your reference:
     {text[:5000]}
-    """
+"""
 
     response = llm_model.generate_content(prompt)
     return jsonify({"summary": response.text})
