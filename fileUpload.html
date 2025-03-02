@@ -18,23 +18,21 @@
         <nav>
             <img src="images/UBC-logo.png">
             <div class="nav-links">
-                <a href="#">About</a>
+                <a href="#" class="button" onclick="goToIndexPage()">Home</a>
                 <a href="#">How does the AI Work?</a>
                 <a href="#">Don't Believe Us?</a>
                 <a href="#">Extension</a>
             </div>
             <button>Get Started</button>
         </nav>
-    <div class="wrapper">
+    <div class="wrapper2">
         <header>Upload File</header>
         <form action="#">
             <input type="file" class="file-input" hidden id="fileInput">
             <i class="ri-upload-cloud-2-line" id="uploadIcon"> </i>
             <p>Browse File to Upload</p>
-            <button type="button" class="feedback-button" onclick="goToFeedbackPage()">ENTER</button>
         </form>
         <section class="uploaded-area" id="uploadedArea" style="display: none;">
-
             <li class="row">
                 <div class="content">
                     <i class="ri-file-3-fill"></i>
@@ -49,14 +47,10 @@
     </div>
 
 
-    <!-- Navigation button to go back home -->
-    <div class="home">
-        <button class="home-button" onclick="goToIndexPage()">HOME</button>
-    </div>
+ 
 
     <div class="result">
-        <!-- Add type="button" to prevent form submission -->
-        <button type="button" class="feedback-button" onclick="goToFeedbackPage()">ENTER</button>
+        <button type="button" class="feedback-button" onclick="goToFeedbackPage()">SUBMIT</button>
     </div>
 
     <script>
