@@ -63,6 +63,33 @@ body {
     
 }
 
+
+.feedback-button{
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    margin-top: 35px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: Verdana, sans-serif;
+    color: white;
+    background-color: #4682B4;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.feedback-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #315F7D;
+}
+
+.feedback-button:hover {
+    background-color: #315F7D;
+    border-color: #315F7D;
+}
+
+
 form :where(i, p){
     color:#779ebb;
 }
@@ -109,22 +136,8 @@ section .details span{
     justify-content: space-between;
 }
 
-.progress-area .progress-bar{
-    height: 10px;
-    weight: 100%;
-    background: #ffff;
-    margin-bottom: 4px;
-    border-radius: 30px;
 
-}
 
-.progress-bar .progress{
-    height: 100%;
-    width: 10%;
-    background: #607566;
-    border-radius: inherit;
-
-}
 
 .FileUpload, .TextUpload{
     background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6 50%); 
@@ -151,6 +164,27 @@ section .details span{
     font-size: 16px;
 }
 
+.uploaded-area {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    text-align: center;      /* Ensure text is centered */
+    padding: 50px;           /* Add padding to give some space around */
+}
+
+/* Adjust the font size and spacing for the file name */
+#fileName {
+    font-size: 14px; /* Adjust this as per your preference */
+    font-weight: bold; /* Optional: Makes the file name bold */
+    margin-right: 10px; /* Optional: Adds space between the file name and size */
+}
+
+/* Center the row content */
+.row {
+    display: flex;
+    align-items: center; /* Vertically align content */
+    justify-content: center; /* Horizontally align content */
+}
 
 
 /* For the input text section */
@@ -301,11 +335,15 @@ nav button:hover{
     cursor: pointer;
     transition: background 0.3s ease;
 }
+
+
     */
 .home-button:focus {
     outline: none;
     box-shadow: 0 0 5px #315F7D;
 }
+
+
 
 
 
