@@ -3,63 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fine Print</title>
-    <link rel = "stylesheet" href = "styles.css"/>
+    <title>Upload Page</title>
+    <link rel="stylesheet" href="styles.css"/>
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
 </head>
-<body>
+<body class="GridContainer">
+    <div class="wrapper">
+        <header>Choose Upload Type</header>
+        <!-- Buttons to navigate to fileUpload.html and textUpload.html -->
+        <div class="title-container">
+            <a href="fileUpload.html">
+                <button class="navigate-button" onclick=goToFileUploadPage()>Go to File Upload</button>
+            </a>
+            <a href="textUpload.html">
+                <button class="navigate-button" onclick=goToTextUploadPage()>Go to Text Upload</button>
+            </a>
+        </div>
+    </div>
+    <div class="Contamine">
+        <script>
+            let container = document.querySelector('.Contamine');
+            for ( let i = 0; i < 12; i++ ){
+                let row = document.createElement('div');
+                row.classList.add('row');
+                for(let j = 0; j < 20; j++){
+                    let box = document.createElement('div');
+                    box.classList.add('box');
+                    box.style.filter = `hue-rotate(${i + 10}deg)`;
+                    row.appendChild(box);
+                }
+                container.appendChild(row);
+            }
+        </script>
 
-    <div class = "wrapper">
-        <header>Upload File</header>
-        <form action = "#">
-            <input type="file" class="file-input" hidden id = "fileInput">
-            <i class="ri-upload-cloud-2-line" id="uploadIcon"> </i>
-            <p>Browse File to Upload</p>
-        </form>
-        <section class = "progress-area">
-            <li class = "row"> 
-                <i class="ri-file-3-fill"></i>
-                <div class="content">
-                    <div class="details">
-                        <span class="name">image_01.png • Uploading...</span>
-                        <span class="percent">50%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                </div>
-            </div>
-        </li>     
-    </section>
-    <section class="uploaded-area">
-        <li class="row">
-            <div class="content">
-                <i class="ri-file-3-fill"></i>
-                <div class="details">
-                    <span class="name">image_01.png • Uploaded...</span>
-                    <span class="size">70 KB</span>
-                </div>
-            </div>
-            <i class="ri-check-line"></i>
-        </li>
-    </section>
-</div>
-
-<div class="insert-text">
-    <div class="input">
-        <input type="text" id="textInput" placeholder="Enter text here...">
-    </div> 
-    <div class="btn">
-        <button class="insert-text-btn" onclick="insertText()">INSERT TEXT </button>
-    </div> 
-</div>
-
-    <!-- Navigation button to go back home -->
-    <div class="title-container">
-        <button class="navigate-button" onclick="goToIndexPage()">Home</button>
     </div>
 
-    
+    <script>
+        function goToFileUploadPage() {
+            window.location.href = "fileUpload.html"; // Redirect to another page
+        }
+        function goToTextUploadPage() {
+            window.location.href = "textUpload.html"; // Redirect to another page
+        }
+    </script>
 
 </body>
 </html>
