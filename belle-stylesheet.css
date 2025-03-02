@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     background-color: transparent;
     font-family: 'Switzer', sans-serif;
-    color:#003F9A;
+    color:#3A5E7A;
     overflow: auto;
     /*background-image:linear-gradient(#78f6ff,#003F9A);*/
     background-size: cover;
@@ -19,7 +19,7 @@ header {
     width: 100%;
     height: 90px;
     background-color: white;
-    border-bottom: 3px solid #003F9A;
+    border-bottom: 3px solid #3A5E7A;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    border: 1px solid #003F9A;
+    border: 1px solid #3A5E7A;
     top: 16px;
     left: 50%;
     transform: translateX(-50%);
@@ -43,13 +43,13 @@ header {
 
 .navbar a {
     text-decoration: none;
-    color: #78C1FF;
+    color: black;
     padding: 10px 20px;
     white-space: nowrap;
 }
 
 .navbar a:hover{
-    color:#003F9A;
+    color:#3A5E7A;
 }
 
 .nav-logo {
@@ -70,7 +70,7 @@ header {
 }
 
 .get-started {
-    border: 2px solid #78C1FF;
+    border: 2px solid #9AAB89;
     border-radius: 50px;
     padding: 8px 20px;
     background-color: transparent;
@@ -78,7 +78,7 @@ header {
 }
 
 .get-started:hover {
-    background-color: #78C1FF;
+    background-color: #9AAB89;
     color: white;
 }
 
@@ -131,7 +131,7 @@ header {
     position: absolute;
     bottom: -60px;
     right:0;
-    background-color: #78C1FF;
+    background-color: #9AAB89;
     color: white;
     border: 3px solid white;
     padding: 10px 20px;
@@ -146,12 +146,12 @@ header {
 }
 
 .download:hover {
-    background-color: #003F9A;
+    background-color: #3A5E7A;
 }
 
 details {
     border-bottom: 3px solid ;
-    border-color:#003F9A;
+    border-color:#3A5E7A;
     padding: 10px;
 }
 summary {
@@ -166,5 +166,5 @@ summary {
     top: 0;
     left: 0;
     z-index: -1;
-    background: linear-gradient(#78f6ff, #003F9A);
+    background: linear-gradient(#9AAB89, #3A5E7A);
 }

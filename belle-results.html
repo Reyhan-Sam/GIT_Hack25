@@ -31,7 +31,7 @@
                 <i class="ri-links-line"></i>
                 <a href="#">Extension</a>
             </div>
-            <a href="#" class="get-started">Get Started</a>
+            <a href="#" class="get-started" onclick="goToUploadPage()">Get Started</a>
         </div>
     </nav>
     
@@ -77,6 +77,9 @@
     <script>
         function goToIndexPage() {
             window.location.href = "index.html";
+        }
+        function goToUploadPage() {
+            window.location.href = "upload.html";
         }
         particlesJS("particles-js", {
         "particles": {
