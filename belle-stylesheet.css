@@ -168,3 +168,14 @@ summary {
     z-index: -1;
     background: linear-gradient(#9AAB89, #3A5E7A);
 }
+#redFlags {
+    list-style-type: disc; /* Changes numbers to bullet points */
+    padding-left: 20px; /* Adjusts left padding */
+}
+
+#redFlags li {
+    font-weight: 900px; /* Makes text bold */
+    margin-bottom: 12px; /* Increases spacing between items */
+    line-height: 1.6; /* Improves readability */
+    font-size: 16px; /* Increases text size for better visibility */
+}
