@@ -27,6 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 });
+function resizeInput() {
+    var textarea = document.getElementById("textInput");
+    textarea.style.height = 'auto'; // Reset height to auto so it can shrink if text is removed
+    textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to the scrollHeight of the textarea
+}
+
+function insertText() {
+    var inputText = document.getElementById("textInput").value;
+    console.log(inputText); // You can do whatever with the inserted text
+}
 
 function insertText() {
     const inputText = document.getElementById('textInput').value;

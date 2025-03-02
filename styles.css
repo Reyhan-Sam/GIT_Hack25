@@ -48,6 +48,10 @@ body {
     border: 3px dashed #779ebb;
 }
 
+.wrapper title-container{
+
+}
+
 form :where(i, p){
     color:#779ebb;
 }
@@ -103,7 +107,6 @@ section .details span{
 
 }
 
-.
 .uploaded-area{
     max-height: 150px;
     overflow-y: scroll;
@@ -158,6 +161,12 @@ section .details span{
     flex-grow: 1;
 }
 
+textarea {
+    transition: height 0.3s ease-in-out;
+    overflow: hidden; /* Hide scrollbar */
+    resize: none; /* Prevent manual resizing by the user */
+}
+
 .input input {
     font-size: 18px; /* Increase the font size */
     padding: 15px 20px; /* Add more padding to make the input field larger */
@@ -198,51 +207,30 @@ section .details span{
 
 
 
-.title-container {
+.home-button:hover {
+    background-color: #315F7D;
+    border-color: #315F7D;
+}
+
+/* Navigation button styles */
+.home-button {
     position: absolute;
     top: 20%;
     left: 10%;  /* Align to the left */
     transform: translateY(-50%); /* Adjust for vertical centering */
-}
-
-/* Heading styles */
-.heading {
-    color: rgb(180, 194, 185);
-    font-size: 2rem;  /* Adjust title size */
-    font-family: 'Switzer', sans-serif;
-    margin: 0;
-}
-
-/* Subheading styles */
-.subheading {
-    color: rgb(200, 220, 215);
-    font-size: 1.2rem;  /* Smaller text for subtitle */
-    font-family: 'Switzer', sans-serif;
-    margin-top: 5px;
-    opacity: 0.8;  /* Slight transparency for softer look */
-}
-
-
-.navigate-button:hover {
-    background-color: #3d749a;
-}
-
-
-
-/* Navigation button styles */
-.navigate-button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1rem;
     font-family: Verdana, sans-serif;
     color: white;
     background-color: #4682B4;
-    border: none;
+    border: 1px solid #dedede;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
-.navigate-button:hover {
-    background-color: #315F7D;
+.home-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #315F7D;
 }
+
