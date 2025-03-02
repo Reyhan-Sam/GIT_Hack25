@@ -13,19 +13,25 @@
 
     <div class="insert-text">
         <div class="input">
-            <textarea id="textInput" placeholder="Enter text here..." oninput="resizeInput()"></textarea>
+            <textarea id="textInput" placeholder="Enter text here..." ></textarea>
         </div> 
         <div class="btn">
             <button class="insert-text-btn" onclick="insertText()">INSERT TEXT</button>
         </div> 
-    </div>
-
-    <!-- Navigation button to go back home -->
-    <div class="home">
-        <button class="home-button" onclick="goToIndexPage()">Home</button>
+        <div class="home">
+            <button class="home-button" onclick= goToIndexPage()>Home</button>
+        </div>
     </div>
 
     
+    
+
+
+    <script>
+        function goToIndexPage() {
+            window.location.href = "index.html"; 
+        }
+    </script>
 
 </body>
 </html>

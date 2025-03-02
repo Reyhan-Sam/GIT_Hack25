@@ -48,8 +48,13 @@ body {
     border: 3px dashed #779ebb;
 }
 
-.wrapper title-container{
-
+.wrapper .title-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    text-decoration: none;
+    gap: 10px;
+    
 }
 
 form :where(i, p){
@@ -152,39 +157,39 @@ section .details span{
 /* For the input text section */
 .insert-text {
     display: flex;
-    align-items: center;
-    margin-top: 50px; /* Add margin-top to move the input and button lower */
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: -50px; /* Add margin-top to move the input and button lower */
     gap: 15px; /* Adjust this gap as needed */
 }
 
 .input {
     flex-grow: 1;
+    max-width: 600px; /* Add max-width to limit how wide it gets */
 }
 
 textarea {
-    transition: height 0.3s ease-in-out;
-    overflow: hidden; /* Hide scrollbar */
-    resize: none; /* Prevent manual resizing by the user */
+   width: 500px;
+   height: 400px;
+   border: 1px solid #dedede; /* Border around the textarea */
+   border-radius: 8px; /* Slight rounding of corners */
+    font-size: 18px; /* Font size for text */
+    padding: 20px 20px; /* Padding to make the text easier to read */
+
 }
 
-.input input {
-    font-size: 18px; /* Increase the font size */
-    padding: 15px 20px; /* Add more padding to make the input field larger */
-    width: 100%; /* Ensure the input field takes up the full width of the container */
-    border: 1px solid #dedede;
-    border-radius: 0px;
-    box-sizing: border-box; /* Include padding and border in the total width and height */
-}
+
+
 .insert-text-btn {
     font-size: 16px;
     padding: 10px 30px;
     border: 1px solid #dedede;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-weight: 500;
+    font-weight: 100;
     background-color: #4682B4;
     color: white;
     transition: all 0.3s ease;
@@ -234,3 +239,30 @@ textarea {
     box-shadow: 0 0 5px #315F7D;
 }
 
+
+/* These are for for the upload.html buttons*/
+.navigate-button{
+    text-decoration: none;
+    /* Align to the left */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    margin-top: 20px;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-family: Verdana, sans-serif;
+    color: white;
+    background-color: #4682B4;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navigate-button:hover {
+    background-color: #315F7D;
+    border-color: #315F7D;
+}
+
+.navigate-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #315F7D;
+}

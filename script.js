@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const uploadIcon = document.getElementById('uploadIcon');
     const fileInput = document.getElementById('fileInput');
 
+
+    var myTextArea = document.getElementsByTagName('textarea')[0];
+    var myTextLength = myTextArea.value.length
+    var myTextWidth = parseInt(window.getComputedStyle(myTextArea).width);
+    var myTextMinLength = 20;
+    var myTextMaxWidth = ((parseInt(window.getComputedStyle(document.body).width) / 100) * 80);
+    myTextArea.addEventListener('keypress', checkTextLength, false);
+
     // Add event listener to the cloud icon to trigger the file input
     uploadIcon.addEventListener('click', () => {
         fileInput.click();
@@ -27,16 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 });
-function resizeInput() {
-    var textarea = document.getElementById("textInput");
-    textarea.style.height = 'auto'; // Reset height to auto so it can shrink if text is removed
-    textarea.style.height = textarea.scrollHeight + 'px'; // Set the height to the scrollHeight of the textarea
-}
-
-function insertText() {
-    var inputText = document.getElementById("textInput").value;
-    console.log(inputText); // You can do whatever with the inserted text
-}
+// function resizeInput() {
+//     var myTextArea = document.getElementsByTagName('textarea')[0];
+//     var myTextLength = myTextArea.value.length
+//     var myTextWidth = parseInt(window.getComputedStyle(myTextArea).width);
+//     var myTextMinLength = 20;
+//     var myTextMaxWidth = ((parseInt(window.getComputedStyle(document.body).width) / 100) * 80); 
+// }
 
 function insertText() {
     const inputText = document.getElementById('textInput').value;
@@ -51,6 +56,4 @@ function goToIndexPage() {
     window.location.href = "index.html"; // Redirect to another page
 }
 
-function goToFeedbackPage() {
-    window.location.href = "index.html"; // Redirect to another page
-}
+

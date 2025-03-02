@@ -12,17 +12,26 @@
 
     <div class="wrapper">
         <header>Choose Upload Type</header>
-        
         <!-- Buttons to navigate to fileUpload.html and textUpload.html -->
         <div class="title-container">
             <a href="fileUpload.html">
-                <button class="navigate-button">Go to File Upload</button>
+                <button class="navigate-button" onclick=goToFileUploadPage()>Go to File Upload</button>
             </a>
             <a href="textUpload.html">
-                <button class="navigate-button">Go to Text Upload</button>
+                <button class="navigate-button" onclick=goToTextUploadPage()>Go to Text Upload</button>
             </a>
         </div>
     </div>
+
+
+    <script>
+        function goToFileUploadPage() {
+            window.location.href = "fileUpload.html"; // Redirect to another page
+        }
+        function goToTextUploadPage() {
+            window.location.href = "textUpload.html"; // Redirect to another page
+        }
+    </script>
 
 </body>
 </html>
