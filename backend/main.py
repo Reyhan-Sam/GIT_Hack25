@@ -18,7 +18,6 @@ llm_model = genai.GenerativeModel("gemini-2.0-flash")
 app = Flask(__name__)
 CORS(app)
 
-
 model = joblib.load("model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 translation = {0: "positive", 1: "negative", 2: "general"}

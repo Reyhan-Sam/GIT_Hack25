@@ -7,8 +7,6 @@
     font-family: 'Signika';
 }
 
-
-
 img{
     object-fit: cover;
 }
@@ -31,11 +29,11 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #003F9A;
     position: absolute;
     top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 42.5%;
+    transform: translateX(-30%);
     border-radius: 16px;
     padding: 12px;
 }
@@ -43,7 +41,6 @@ nav{
 nav img{
     width: 35px;
     height: 35px;
-    gap: 5px;
 }
 
 nav .nav-links{
@@ -82,38 +79,28 @@ nav button:hover{
     border-color: #dedede;
 }
 
-
-.heading{
-    color:rgb(123, 138, 143)
+body{
+    background-color: #1f4565;
+    background-image: -webkit-linear-gradient(-20deg, #1f4565, #B0E0E6 50%, #FFF 50%);
+    background-size: cover;  
+    background-attachment: fixed;  
 }
 
-body {
-    background-color: #1f4565;
-    background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6 50%, #FFF 50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* Horizontally center */
-    align-items: center;       /* Vertically center */
-    height: 100vh;             /* Take up the full height of the viewport */
-    margin: 0;  
-} 
-
-.begin{
+.begin {        
     margin-top: 80px;
     height: calc(100vh - 80px);
-    padding: 0 60px;
+    padding: 0 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    margin-left: 100px;
 }
 
 .begin > img{
-    margin-right: 40px;
-    max-width: 900px;
+    max-width: 520px;
     width: 44%;
     border-radius: 26px;
+    margin-right: -60px;
 }
 
 .begin .title-container{
@@ -122,18 +109,14 @@ body {
     gap: 100px;
 }
 
-.begin .title-container .top{
-    margin-bottom: 50px;
-}
-
-.begin .title-container .top h1{
+.begin .title-container .top h2{
     font-size: 74px;
-    margin-bottom: -5px;
+    margin-bottom: 24px;
 }
 
 .begin .title-container .top p{
     font-size: 18px;
-    margin-bottom: 44px;
+    margin-bottom: 24px;
     text-align: justify;
 }
 
@@ -154,7 +137,6 @@ body {
     gap: 5px;
     font-weight: 500;
     transition: all 0.3s ease;
-    margin-top: -10px;
 }
 
 /*
@@ -170,12 +152,6 @@ body {
 /*} 
 /*/ 
 /* Heading styles */
-.heading {
-    color: rgb(180, 194, 185);
-    font-size: 2rem;  /* Adjust title size */
-    font-family: Signika, sans-serif;
-    margin: 0;
-}
 
 /* Subheading styles */
 .subheading {
@@ -263,4 +239,124 @@ body {
 
 .navigate-button:hover {
     background-color: #315F7D;
+}
+
+.about{
+    display: flex;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.about > p{
+    font-size: 14px;
+    color: #606060;
+    border: 1px solid #e8e8e8;
+    padding: 6px 14px;
+    border-radius: 16px;
+    background: #FFF;
+    margin-bottom: 12px;
+}
+
+.about > h2{
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about .items{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.about .items .item{
+    width: 26%;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background: #f1f1f1;
+    padding: 0 0 30px;
+}
+
+.about .items .item .inner{
+    background: #FFF;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    min-height: 365px;
+}
+
+.about .items .item .inner img{
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 12px;
+}
+
+.about .items .item .inner a{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.about .items .item .inner p{
+    font-size: 15px;
+    color: #606060;
+}
+
+.workingAI{
+    background-color: #1f4565;
+    background-image: -webkit-linear-gradient(20deg, #1f4565, #B0E0E6 50%, #FFF 50%);
+    background-size: cover;  
+    background-attachment: fixed;   
+}
+
+.workingAI .inner{
+    background: #1f1f1f;
+    color: #fff;
+    padding: 70px;
+    border-radius: 24px;
+}
+
+.workingAI .inner > button i{
+    font-size: 18px;
+}
+
+.workingAI .inner > h2{
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+
+.workingAI .inner p.info{
+    font-size: 18px;
+    color: #dedede;
+    margin-bottom: 24px;
+}
+
+.workingAI .inner .items{
+    display: flex;
+    gap: 20px;
+}
+
+.workingAI .inner .items .item i{
+    font-size: 38px;
+    border: 1px solid #606060;
+    border-radius: 10px;
+    padding: 10px;
+    background: #303030;
+}
+
+.workingAI .inner .items .item a{
+    display: block;
+    margin: 24px 0 14px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.projects .inner .items .item p{
+    color: #a1a1a1;
+    font-size: 16px;
+    line-height: 24px;
 }
