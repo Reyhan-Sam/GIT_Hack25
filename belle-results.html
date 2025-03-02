@@ -7,33 +7,22 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <link rel="stylesheet" href="belle-stylesheet.css">
+    <link rel="stylesheet" href="style.css">
     <title>Results</title>
 </head>
 
 <body>
     <div id="particles-js"></div>
 
-    <nav>
-        <div class="navbar">
-            <img src="https://ires.ubc.ca/files/2019/10/ubc-logo.png" alt="logo" class="nav-logo">
-            <div class="nav-item">
-                <i class="ri-shield-user-line"></i>
-                <a href="#" onclick="goToIndexPage()">About</a>
-            </div>
-            <div class="nav-item">
-                <i class="ri-upload-2-line"></i>
-                <a href="#">How does the AI work?</a>
-            </div>
-            <div class=" nav-item">
-                <i class="ri-lightbulb-flash-line"></i>
-                <a href="#">Don't believe us?</a>
-            </div>
-            <div class="nav-item">
-                <i class="ri-links-line"></i>
-                <a href="#">Extension</a>
-            </div>
-            <a href="#" class="get-started" onclick="goToUploadPage()">Get Started</a>
+    <nav style="background-color: white;">
+        <img src="images/FinePrint.png">
+        <div class="nav-links">
+            <a href="#" id="link1">About</a>
+            <a href="#" id="link2">How does the AI Work?</a>
+            <a href="#" id="link3">Don't Believe Us?</a>
+            <a href="#">Extension</a>
         </div>
+        <button onclick=goToUploadPage()>Get Started</button>
     </nav>
 
     <div class="folder">

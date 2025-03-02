@@ -70,6 +70,8 @@ nav button{
     border-radius: 50px;
     background-color: transparent;
     transition: 0.3s;
+    width: 122px;
+    height: 42px;
     margin-top: 5px;
     font-size: 16px;
     font-weight: 600;
