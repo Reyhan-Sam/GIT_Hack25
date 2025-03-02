@@ -9,32 +9,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
 </head>
 <body>
-
     <div class = "wrapper">
         <header>Upload File</header>
         <form action = "#">
-            <i class="ri-upload-cloud-2-line"  ></i>
+            <input type="file" class="file-input" hidden id = "fileInput">
+            <i class="ri-upload-cloud-2-line" id="uploadIcon"> </i>
             <p>Browse File to Upload</p>
+            <button type="button" class="feedback-button" onclick="goToFeedbackPage()">ENTER</button>
         </form>
-    <section class="uploaded-area">
-        <li class="row">
-            <div class="content">
-                <i class="ri-file-3-fill"></i>
-                <div class="details">
-                    <span class="name">image_01.png • Uploaded...</span>
-                    <span class="size">70 KB</span>
+        <section class="uploaded-area" id="uploadedArea" style="display: none;">
+            
+            <li class="row">
+                <div class="content">
+                    <i class="ri-file-3-fill"></i>
+                    <div class="details">
+                        <span class="name" id="fileName">No file selected</span>
+                        <span class="size" id="fileSize">—</span>
+                    </div>
                 </div>
-            </div>
-            <i class="ri-check-line"></i>
-        </li>
-    </section>
-</div>
+                <i class="ri-check-line"></i>
+            </li>
+        </section>
+    </div>
+
 
     <!-- Navigation button to go back home -->
     <div class="home">
         <button class="home-button" onclick="goToIndexPage()">HOME</button>
     </div>
 
+    <div class="result">
+        <!-- Add type="button" to prevent form submission -->
+        <button type="button" class="feedback-button" onclick="goToFeedbackPage()">ENTER</button>
+    </div>
+
+    <script>
+        function goToFeedbackPage() {
+            // Redirect to another page
+            window.location.href = "formattedText.html";
+        }
+    </script>
 
 </body>
 </html>
