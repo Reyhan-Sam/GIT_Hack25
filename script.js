@@ -1,9 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const uploadIcon = document.getElementById('uploadIcon');
     const fileInput = document.getElementById('fileInput');
-    const progressBar = document.querySelector('.progress-bar .progress');
-    const percentText = document.querySelector('.percent');
+    
+    uploadIcon.addEventListener('click', () => {
+        fileInput.click();
+    });
 
+    uploadIcon.onchange = ({target}) =>{
+        let file = target.files[0];
+        if(file){
+            let fileName = file.name;
+            uploadFile(fileName);
+            
+        }
+
+        function uploadFile(name){
+            
+        }
+    }
+});
     var myTextArea = document.getElementsByTagName('textarea')[0];
     var myTextLength = myTextArea.value.length
     var myTextWidth = parseInt(window.getComputedStyle(myTextArea).width);
@@ -12,16 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     myTextArea.addEventListener('keypress', checkTextLength, false);
 
     // Add event listener to the cloud icon to trigger the file input
-    uploadIcon.addEventListener('click', () => {
-        fileInput.click();
-        animateProgressBar();
-        
-    });
     
-   
     function uploadFile(name) {
         console.log("Uploading file:", name);
-        animateProgressBar();
+        
     }
 
     function animateProgressBar() {
@@ -39,21 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
        
-    });
+ 
 
 
-    uploadIcon.onchange = ({target}) =>{
-        let file = target.files[0];
-        if(file){
-            let fileName = file.name;
-            uploadFile(fileName);
-            animateProgressBar();
-        }
-
-        function uploadFile(name){
-            
-        }
-    }
+    
 
 function insertText() {
     const inputText = document.getElementById('textInput').value;
