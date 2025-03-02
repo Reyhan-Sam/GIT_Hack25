@@ -13,7 +13,8 @@ a{
 
 body {
     /* background-color: #4178a4; */
-    /* background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6); */
+    background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6);
+   
     display: flex;
     flex-direction: column;
     justify-content: center;   /* Horizontally center */
@@ -114,6 +115,8 @@ section .row{
     align-items: center;
     justify-content:space-between;
 }
+
+
 
 section .row i{
     font-size: 30px;
@@ -217,6 +220,7 @@ nav{
     position: absolute;
     top: 16px;
     left: 50%;
+    background-color: ;
     transform: translateX(-50%);
     border-radius: 16px;
     padding: 12px;
