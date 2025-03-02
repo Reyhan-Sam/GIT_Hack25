@@ -55,7 +55,8 @@ nav .nav-links{
 nav .nav-links a{
     font-size: 18px;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 15px 15px 15px 15px;
+    padding-right: 15px;
     color: black;
     white-space: nowrap;
     transition: all 0.3s ease;
@@ -72,8 +73,9 @@ nav button{
     transition: 0.3s;
     width: 122px;
     height: 42px;
+    padding: 0px 10px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
