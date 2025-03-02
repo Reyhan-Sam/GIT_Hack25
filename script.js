@@ -66,4 +66,6 @@ function goToIndexPage() {
     window.location.href = "index.html"; // Redirect to another page
 }
 
-
+function goToFeedbackPage() {
+    window.location.href = "index.html"; // Redirect to another page
+}

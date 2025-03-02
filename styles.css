@@ -7,10 +7,13 @@
     font-family: 'Switzer', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
 
 body {
     /* background-color: #4178a4; */
-    background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6);
+    /* background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6); */
     display: flex;
     flex-direction: column;
     justify-content: center;   /* Horizontally center */
@@ -24,8 +27,11 @@ body {
     padding: 30px;
     background: #fff;
     border-radius: 5px;
-    
-    }
+    background-image: #FFFFFF;
+    z-index: 100; 
+    position: absolute;
+    align-items: center;
+}
 
 .wrapper header{
     color: #4682B4;
@@ -93,7 +99,7 @@ section .details span{
 
 .progress-area .row .content{
     width: 100%;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .progress-area .details{
@@ -104,7 +110,7 @@ section .details span{
 }
 
 .progress-area .progress-bar{
-    height: 6px;
+    height: 10px;
     weight: 100%;
     background: #ffff;
     margin-bottom: 4px;
@@ -112,22 +118,16 @@ section .details span{
 
 }
 
-.uploaded-area{
-    max-height: 150px;
-    overflow-y: scroll;
-
-}
-
-.uploaded-area::-webkit-scrollbar{
-    width: 0 px;
-}
 .progress-bar .progress{
     height: 100%;
-    width: 40%;
+    width: 10%;
     background: #607566;
     border-radius: inherit;
-    transition: width 0.5s linear; /* Smooth transition effect */
 
+}
+
+.FileUpload, .TextUpload{
+    background-image: -webkit-linear-gradient(-30deg, #1f4565, #B0E0E6 50%); 
 }
 
 .uploaded-area .row .content{
@@ -136,8 +136,6 @@ section .details span{
 }
 
 .uploaded-area .row .details{
-    display: flex;
-    margin-left: 15px;
     flex-direction: column;
 }
 
@@ -157,46 +155,117 @@ section .details span{
 
 /* For the input text section */
 .insert-text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: -50px; /* Add margin-top to move the input and button lower */
-    gap: 15px; /* Adjust this gap as needed */
+    margin-top: 125px; /* Add margin-top to move the input and button lower */
+    gap: 25px; /* Adjust this gap as needed */
 }
 
 .input {
-    flex-grow: 1;
+    flex-grow: 2;
     max-width: 600px; /* Add max-width to limit how wide it gets */
 }
 
 textarea {
    width: 500px;
    height: 400px;
-   font-family: 'Switzer', sans-serif;
    border: 1px solid #dedede; /* Border around the textarea */
    border-radius: 8px; /* Slight rounding of corners */
     font-size: 18px; /* Font size for text */
     padding: 20px 20px; /* Padding to make the text easier to read */
+    margin-top: -80px;
+}
 
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid black;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+    padding: 12px;
+    z-index: 1000;
+}
+
+nav img{
+    width: 35px;
+    height: 35px;
+}
+
+nav .nav-links{
+    display: flex;
+    gap: 24px;
+}
+
+nav .nav-links a{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: black;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+nav .nav-links a:hover{
+    color: #3A5E7A;
+}
+
+nav button, .insert-text-btn, .home-button {
+    border: 2px solid #3A5E7A;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: 0.3s;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 122px;
+    height: 42px;
+}
+
+nav button:hover{
+    color: #000;
+    background: #fff;
+    border-color: #dedede;
 }
 
 
-
 .insert-text-btn {
-    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 75%;  
+    width: 244px;
+}
+    /*
+    transform: translateY(-50%);
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: Verdana, sans-serif;
+    color: white;
+    background-color: #4682B4;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+    */
+
+/* font-size: 16px;
     padding: 10px 30px;
     border: 1px solid #dedede;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Switzer', sans-serif;
+    gap: 10px;
+    font-weight: 100;
     background-color: #4682B4;
     color: white;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin-top: 10px;
-}
+    margin-top: 30px;*/
 
 /* Add hover effect similar to "Get Started" and "Meet the Team" buttons */
 .insert-text-btn:hover {
@@ -210,9 +279,6 @@ textarea {
     box-shadow: 0 0 5px #315F7D;
 }
 
-
-
-
 .home-button:hover {
     background-color: #315F7D;
     border-color: #315F7D;
@@ -222,12 +288,12 @@ textarea {
 .home-button {
     position: absolute;
     top: 20%;
-    left: 15%;  /* Align to the left */
+    left: 10%;  /* Align to the left */
     transform: translateY(-50%); /* Adjust for vertical centering */
-    margin-top: 10px;
-    padding: 10px 30px;
-    font-size: 16px;
-    font-family: 'Switzer', sans-serif;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: Verdana, sans-serif;
     color: white;
     background-color: #4682B4;
     border: 1px solid #dedede;
@@ -235,6 +301,7 @@ textarea {
     cursor: pointer;
     transition: background 0.3s ease;
 }
+    */
 .home-button:focus {
     outline: none;
     box-shadow: 0 0 5px #315F7D;
@@ -270,4 +337,3 @@ textarea {
     outline: none;
     box-shadow: 0 0 5px #315F7D;
 }
-

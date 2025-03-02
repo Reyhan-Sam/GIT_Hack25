@@ -8,18 +8,27 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
 </head>
-<body>
-
+<body class="TextUpload">
+    <nav>
+        <img src="images/UBC-logo.png">
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">How does the AI Work?</a>
+            <a href="#">Don't Believe Us?</a>
+            <a href="#">Extension</a>
+        </div>
+        <button onclick=goToUploadPage()>Get Started</button>
+    </nav>
 
     <div class="insert-text">
         <div class="input">
             <textarea id="textInput" placeholder="Enter text here..." ></textarea>
         </div> 
         <div class="btn">
-            <button class="insert-text-btn" onclick="insertText()">INSERT TEXT</button>
+            <button class="insert-text-btn" onclick="insertText()"><i class="ri-arrow-right-s-line"></i>INSERT TEXT</button>
         </div> 
         <div class="home">
-            <button class="home-button" onclick= goToIndexPage()>HOME</button>
+            <button class="home-button" onclick= goToIndexPage()>Home</button>
         </div>
     </div>
 
