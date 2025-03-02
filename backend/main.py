@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
 import joblib
 from pypdf import PdfReader
+from flask_cors import CORS
 
 
 app = Flask(__name__)
-
+CORS(app)
 
 model = joblib.load("model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
