@@ -1,6 +1,17 @@
 from flask import Flask, request, jsonify
 import joblib
 from pypdf import PdfReader
+from dotenv import load_dotenv
+import os
+import google.generativeai as genai
+import fitz
+
+load_dotenv()
+api_key = os.getenv("GENAI_API_KEY")
+if not api_key:
+    raise ValueError("API key not found. Make sure the .env file is correctly set.")
+genai.configure(api_key=api_key)
+model = genai.GenerativeModel("gemini-2.0-flash")
 
 
 app = Flask(__name__)
@@ -17,6 +28,26 @@ positive_threshold = 0.95
 def hello():
     return "Hello, World!"
 
+#LLM summarizer
+@app.route('/summarize-text', methods=['POST'])
+def summarize_text():
+    """Summarizes the extracted legal text Custom LLM"""
+    data = request.get_json()
+    text = data.get('text')
+
+    if not text:
+        return jsonify({"error": "No text provided"}), 400
+
+    response = model.generate_content("""You are an expert in legal document summarization.
+                        Your task is to generate a structured and precise summary of the given contract. 
+                        Focus on key elements such as parties involved, obligations, terms, payment details, 
+                        penalties, termination clauses, and confidentiality. The summary should be concise yet 
+                        comprehensive, avoiding unnecessary legal jargon.
+                        
+                        Here is the contract for your reference:
+                        {text[:5000]}}
+                        """)
+    return jsonify({"summary": response.text})
 
 @app.route('/pdf-to-text', methods=['POST'])
 def pdf_to_text():
@@ -33,6 +64,8 @@ def pdf_to_text():
 def text_analyze_endpoint():
     data = request.get_json()
     text = data.get('text')
+    if not text:
+        return jsonify({"error": "No text provided"}), 400
     res = text_analyze(text)
     return extract_negative(res)
 
@@ -90,7 +123,6 @@ def extract_negative(data):
                 }
             )
     return res
-
 
 if __name__ == '__main__':
     app.run()
