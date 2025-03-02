@@ -51,60 +51,19 @@
         </details>
         <details>
             <summary style="color:red">Red Flags</summary>
-            <p>Major concern summary
             <ol id="redFlags">
                 <li>Concern 1</li>
                 <li>Concern 2</li>
             </ol>
-            </p>
-        </details>
-        <details>
-            <summary style="color:gold">Yellow Flags</summary>
-            <p>Potential problem areas
-            <ol id="yellowFlags">
-                <li>Yellow Flag 1</li>
-                <li>Yellow Flag 2</li>
-            </ol>
-            </p>
-        </details>
-        <details>
-            <summary style="color:green">Green Flags</summary>
-            <p>Positive items
-            <ol id="greenFlags">
-                <li>Positive item 1</li>
-                <li>Positive item 2</li>
-            </ol>
-            </p>
         </details>
         <div class="bottom-tab"></div>
         <button class="download">Download Your Summary <i class="ri-download-line"></i></button>
     </div>
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="output" style="margin-top: 20px;"></div>
 
-    <input type="file" id="fileUpload" accept=".pdf,.docx,.txt">
-
-    <script src="particles.js"></script>
     <script src="index.js"></script>
     <script>
-
-        async function fetchContractAnalysis(file) {
-            const formData = new FormData();
-            formData.append("file", file);
-
-            const response = await fetch("https://127.0.0.1:5000", {
-                method: "POST",
-                body: formData
-            });
-
-            const data = await response.json();
-            populateSections(data);
-        }
-
-        document.getElementById("fileUpload").addEventListener("change", function (event) {
-            let file = event.target.files[0];
-            if (file) {
-                fetchContractAnalysis(file);
-            }
-        });
 
         function goToIndexPage() {
             window.location.href = "index.html";
@@ -113,32 +72,16 @@
             window.location.href = "upload.html";
         }
 
-        function populateSections(data) {
-
-            document.getElementById("summary").innerHTML = data.summary;
-
+        function populateSections(data) { 
             let redFlagsList = document.getElementById("redFlags");
             redFlagsList.innerHTML = "";
-            data.red_flags.forEach(item => {
-                let li = document.createElement("li");
-                li.textContent = item;
-                redFlagsList.appendChild(li);
-            });
-
-            let yellowFlagsList = document.getElementById("yellowFlags");
-            yellowFlagsList.innerHTML = "";
-            data.yellow_flags.forEach(item => {
-                let li = document.createElement("li");
-                li.textContent = item;
-                yellowFlagsList.appendChild(li);
-            });
-
-            let greenFlagsList = document.getElementById("greenFlags");
-            greenFlagsList.innerHTML = "";
-            data.green_flags.forEach(item => {
-                let li = document.createElement("li");
-                li.textContent = item;
-                greenFlagsList.appendChild(li);
+            
+            data.forEach(item => {
+                if (item.classification === "negative") {
+                    let li = document.createElement("li");
+                    li.textContent = item.sentence;
+                    redFlagsList.appendChild(li);
+                }
             });
         }
 
@@ -209,6 +152,49 @@
         });
     </script>
 
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/text-analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ 
+                        text: "We have appropriate organizational safeguards and security measures in place to protect your Personal Data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. The communication between your browser and our website uses a secure encrypted connection wherever your Personal Data is involved. We require any third party who is contracted to process your Personal Data on our behalf to have security measures in place to protect your data and to treat such data in accordance with the law. In the unfortunate event of a Personal Data breach, we will notify you and any applicable regulator when we are legally required to do so. Personal information may be stored on unsecured servers. Personal information may be stored on unsecured servers lol." 
+                        
+                    })
+                });
+        
+                const data = await response.json();
+        
+                // Select Red Flags section and clear existing content
+                let redFlagsList = document.getElementById("redFlags");
+                redFlagsList.innerHTML = ""; 
+        
+                // Iterate through all negative classifications and add them
+                let negativeSentences = data.filter(item => item.classification === "negative");
+        
+                if (negativeSentences.length > 0) {
+                    negativeSentences.forEach(item => {
+                        let li = document.createElement("li");
+                        li.textContent = item.sentence.trim(); // Trim to remove unnecessary spaces
+                        redFlagsList.appendChild(li);
+                    });
+                } else {
+                    // If no red flags, show a default message
+                    let li = document.createElement("li");
+                    li.textContent = "No red flags detected.";
+                    redFlagsList.appendChild(li);
+                }
+        
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                document.getElementById('output').innerHTML = `<p style="color:red;">Error fetching data</p>`;
+            }
+        }
+    </script>
 
 </body>
 

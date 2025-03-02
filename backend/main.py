@@ -16,7 +16,7 @@ positive_threshold = 0.95
 
 @app.route('/')
 def hello():
-    return "Hello, World!"
+    return jsonify(message="Hello, World!")
 
 
 @app.route('/pdf-to-text', methods=['POST'])
