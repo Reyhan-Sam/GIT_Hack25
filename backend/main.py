@@ -127,7 +127,7 @@ def ml_recognition(sentence):
 def extract_negative(data):
     res = []
     for sentence, classification, confidence in data:
-        # print(sentence, classification, confidence)
+        print(sentence, classification, confidence)
         if int(classification) == 1 and confidence > 0.8:
             res.append(
                 {

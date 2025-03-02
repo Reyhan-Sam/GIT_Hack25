@@ -101,7 +101,7 @@
                     Promise.all(textPromises).then(texts => {
                         const extractedText = texts.join("\n");
                         sessionStorage.setItem("extractedText", extractedText); // Save extracted text for the next page
-                        console.log("Extracted PDF Text:\n", extractedText);
+                        localStorage.setItem("extracted_text", extractedText)
                     });
                 }).catch(error => {
                     console.error("Error loading PDF:", error);
@@ -112,7 +112,7 @@
         }
 
         function goToFeedbackPage() {
-            window.location.href = "formattedText.html";
+            window.location.href = "belle-results.html";
         }
     </script>
 

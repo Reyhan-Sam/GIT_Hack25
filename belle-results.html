@@ -46,8 +46,6 @@
         <div class="bottom-tab"></div>
         <button class="download">Download Your Summary <i class="ri-download-line"></i></button>
     </div>
-    <button onclick=" fetchSummary(); fetchData();">Analyze Document</button>
-    <div id="output" style="margin-top: 20px;"></div>
 
     <script>
 
@@ -139,7 +137,12 @@
     </script>
 
     <script>
-        async function fetchSummary() {
+        window.onload = function() {
+            fetchSummary(localStorage.getItem("extracted_text"));
+            fetchData(localStorage.getItem("extracted_text"));
+        };        
+
+        async function fetchSummary(extracted_text) {
             try {
                 const response = await fetch('http://127.0.0.1:5000/summarize-text', {
                     method: 'POST',
@@ -148,12 +151,11 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        text: "We have appropriate organizational safeguards and security measures in place to protect your Personal Data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. The communication between your browser and our website uses a secure encrypted connection wherever your Personal Data is involved. We require any third party who is contracted to process your Personal Data on our behalf to have security measures in place to protect your data and to treat such data in accordance with the law. In the unfortunate event of a Personal Data breach, we will notify you and any applicable regulator when we are legally required to do so. Personal information may be stored on unsecured servers."
+                        text: extracted_text
                     })
                 });
 
                 const data = await response.json();
-                console.log(data);  // Debugging: Check response format
 
                 let summaryContainer = document.getElementById("summary");
                 summaryContainer.innerHTML = ""; // Clear previous content
@@ -171,7 +173,7 @@
             }
         }
 
-        async function fetchData() {
+        async function fetchData(extracted_text) {
             try {
                 const response = await fetch('http://127.0.0.1:5000/text-analyze', {
                     method: 'POST',
@@ -180,11 +182,12 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        text: "If you provide or make available any personal data to Snap or its affiliates, including by enabling Snap to receive personal data through Snap tools like pixels, JavaScript SDKs, APIs or cookies, within content you approve or make available via the Business Services, or by providing personal data to a third party for the purposes of using the Business Services, then in addition to the representations and warranties in the Business Services Terms, you represent and warrant that: (a) you will comply with Applicable Law, applicable self-regulatory standards and guidelines and any applicable mobile developer or app store terms, guidelines or policies (collectively, Rules) when using the Business Services; (b) the personal data will not contain any information collected from an online service directed to children or about individuals that are under the age of 13 (or, if greater than the age of 13, the minimum age at which the processing of personal data of a data subject is lawful under Applicable Law) or any sensitive information or special category data, as defined in the Rules, including any information that is based on, or includes: (i) an alleged or actual commission of a crime; (ii) health information, including any health information further detailed in our Business Help Centre; or (iii) information about user's financial status, racial or ethnic origin, religious beliefs or preferences, sex life or sexual preferences or trade union membership; (c) the personal data will not contain, include, be based on, or otherwise reveal (directly or indirectly) any “protected health information” or “consumer health data” (as defined in the Rules); (d) you have secured, and will maintain, all necessary rights, licences and consents required to provide or make available the personal data and for the personal data to be used in accordance with the Business Services Terms, including from all data subjects whose data is included in personal data; (d) you will provide sufficient notice to each data subject in compliance with the Rules that the data subject's information collected by you or your agents may be shared with and used by third parties for the purposes specified under the Business Services Terms, including, at a minimum a clear and prominent notice about how and where users can opt out of the use of personal data for ad targeting and, where applicable: (i) for websites, a clear and prominent notice on each webpage where you utilise the Business Services stating that third parties, including Snap and its affiliates, may use cookies, web beacons and other technologies to collect or receive information from your websites, apps and elsewhere on the internet, and may use that information to provide measurement services, advertising targeting and other advertising services; and (ii) for apps, a clear and prominent link inside your apps' settings or your privacy policy, and from within any store or website where your apps are distributed, that explains that third parties, including Snap and its affiliates, may collect or receive information from your apps and other apps, and may use that information to provide measurement services, ad targeting, and other advertising services; (e) in jurisdictions that require informed consent for storing and accessing cookies or other information of a Data Subject (including the European Union), you must ensure, in a verifiable manner, that each data subject provides you with the necessary consent before you use the Business Services to send personal data in connection with that data subject; and (f) you will promptly notify Snap of any actual or threatened complaint relating to personal data, and you will reasonably cooperate with Snap, at your expense, in responding or defending against any such complaint. Snap may request further information in connection with your compliance with this Section."
+                        text: extracted_text
                     })
                 });
 
                 const data = await response.json();
+                console.log(data);
 
                 // Select Red Flags section and clear existing content
                 let redFlagsList = document.getElementById("redFlags");

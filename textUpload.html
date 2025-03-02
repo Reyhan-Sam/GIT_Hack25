@@ -25,7 +25,7 @@
             <textarea id="textInput" placeholder="Enter text here..." ></textarea>
         </div> 
         <div class="btn">
-            <button class="insert-text-btn" onclick="insertText()"><i class="ri-arrow-right-s-line"></i>INSERT TEXT</button>
+            <button class="insert-text-btn" onclick="goToIndexPage()"><i class="ri-arrow-right-s-line"></i>INSERT TEXT</button>
         </div> 
     </div>
 
@@ -34,9 +34,18 @@
 
 
     <script>
-        function goToIndexPage() {
-            window.location.href = "index.html"; 
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const textInput = document.getElementById("textInput");
+            const insertTextBtn = document.querySelector(".insert-text-btn");
+        
+            insertTextBtn.addEventListener("click", function () {
+                const extractedText = textInput.value.trim();
+                if (extractedText) {
+                    localStorage.setItem("extracted_text", extractedText);
+                }
+                window.location.href = "belle-results.html";
+            });
+        });
     </script>
 
 </body>
