@@ -1,4 +1,4 @@
-# AI-Powered Legal Document Analyzer
+# AI-Powered Legal Document Analyzer: FinePrint
 
 ## Overview
 
@@ -53,5 +53,5 @@ Upload a PDF document, and the system will analyze its contents for **red flags*
 
 ## Acknowledgments
 
-- Thanks to our hackathon team Sanjith, Daniel, Natalie and Belle for their contributions!
+- Thanks to our hackathon team Sanjith, Reyhan, Daniel, Natalie and Belle for their contributions!
 
